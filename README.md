@@ -1,3 +1,3 @@
 # mall-demo
 
-the demo project for study mall project
+the demo project for learning mall project
