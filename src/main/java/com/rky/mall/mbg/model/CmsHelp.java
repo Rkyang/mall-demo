@@ -1,23 +1,32 @@
 package com.rky.mall.mbg.model;
 
+import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import java.util.Date;
 
 public class CmsHelp implements Serializable {
+    @ApiModelProperty(value = "主键")
     private Long id;
 
+    @ApiModelProperty(value = "类别编号")
     private Long categoryId;
 
+    @ApiModelProperty(value = "图标文件路径")
     private String icon;
 
+    @ApiModelProperty(value = "标题")
     private String title;
 
+    @ApiModelProperty(value = "显示状态")
     private Integer showStatus;
 
+    @ApiModelProperty(value = "创建时间")
     private Date createTime;
 
+    @ApiModelProperty(value = "阅读数量")
     private Integer readCount;
 
+    @ApiModelProperty(value = "内容")
     private String content;
 
     private static final long serialVersionUID = 1L;

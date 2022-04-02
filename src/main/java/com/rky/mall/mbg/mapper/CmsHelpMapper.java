@@ -2,6 +2,7 @@ package com.rky.mall.mbg.mapper;
 
 import com.rky.mall.mbg.model.CmsHelp;
 import com.rky.mall.mbg.model.CmsHelpExample;
+import io.swagger.annotations.ApiModelProperty;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
