@@ -30,7 +30,7 @@ public class MallApplication {
         LOGGER.info("\n----------------------------------------------------------\n\t" +
                 "Application  is running! Access URLs:\n\t" +
                 "Local访问网址: \t\thttp://localhost:" + port + path + "\n\t" +
-                "External访问网址: \thttp://" + ip + ":" + port + path + "\n\t" +
+                "Swagger访问网址: \thttp://localhost:" + port + "/swagger-ui/index.html\n\t" +
                 "----------------------------------------------------------");
     }
 
