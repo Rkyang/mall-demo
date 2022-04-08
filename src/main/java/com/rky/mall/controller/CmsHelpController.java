@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Api(tags = {"帮助数据管理"})
+@Api(tags = {"帮助管理"})
 @RestController
 @RequestMapping("/help")
 public class CmsHelpController {
