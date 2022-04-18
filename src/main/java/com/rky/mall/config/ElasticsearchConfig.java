@@ -13,10 +13,6 @@ public class ElasticsearchConfig extends AbstractElasticsearchConfiguration {
 
     @Value("${elasticsearch.address}")
     private String address;
-    @Value("${elasticsearch.username}")
-    private String username;
-    @Value("${elasticsearch.password}")
-    private String password;
 
 
     @Override
@@ -29,7 +25,7 @@ public class ElasticsearchConfig extends AbstractElasticsearchConfiguration {
 //                .withConnectTimeout(Duration.ofSeconds(5))
                 // 套接字超时时间，默认为5秒
 //                .withSocketTimeout(Duration.ofSeconds(3))
-                .withBasicAuth(username, password)
+//                .withBasicAuth(username, password)
                 .build();
         return RestClients.create(build).rest();
     }

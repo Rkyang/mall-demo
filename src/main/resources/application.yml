@@ -61,11 +61,3 @@ jwt:
 # 自定义elasticsearch key
 elasticsearch:
   address: localhost:9200
-  username: elastic
-  password: elastic
-
-# 关闭actuator对elasticsearch的健康检查
-management:
-  health:
-    elasticsearch:
-      enabled: false

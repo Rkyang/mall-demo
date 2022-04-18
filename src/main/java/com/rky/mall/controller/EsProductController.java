@@ -39,7 +39,7 @@ public class EsProductController {
 
     @ApiOperation("根据id批量删除商品")
     @DeleteMapping("/batchDelete")
-    public CommonResult<String> delete(List<Long> id) {
+    public CommonResult<String> delete(@RequestParam(name = "id", required = false) List<Long> id) {
         productService.delete(id);
         return CommonResult.success(null);
     }
@@ -56,7 +56,8 @@ public class EsProductController {
 
     @ApiOperation("简单搜索")
     @GetMapping("/search/simple")
-    public CommonResult<CommonPage<EsProduct>> search(String keyword, int pageNum, int pageSize) {
+    public CommonResult<CommonPage<EsProduct>> search(String keyword, @RequestParam(defaultValue = "0") int pageNum,
+                                                      @RequestParam(defaultValue = "10") int pageSize) {
         Page<EsProduct> search = productService.search(keyword, pageNum, pageSize);
         return CommonResult.success(CommonPage.restPage(search));
     }

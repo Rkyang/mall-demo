@@ -12,12 +12,15 @@ import org.springframework.data.elasticsearch.repository.ElasticsearchRepository
 public interface EsProductRepository extends ElasticsearchRepository<EsProduct, Long> {
 
     /**
+     * elasticsearch可以自定义搜索查询方法，如下面的方法，不用自己写实现，使用方法名即可
+     */
+
+    /**
      * 搜索查询
      * @param name 商品名称
      * @param subTitle 商品标题
-     * @param keywords 商品关键字
      * @param pageable 分页信息
      * @return 商品信息
      */
-    Page<EsProduct> findByNameOrSubTitleOrKeywords(String name, String subTitle, String keywords, Pageable pageable);
+    Page<EsProduct> findByNameOrSubTitle(String name, String subTitle, Pageable pageable);
 }
